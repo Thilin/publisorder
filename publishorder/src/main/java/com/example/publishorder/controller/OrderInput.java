@@ -16,20 +16,6 @@ import java.util.UUID;
 @Builder
 public class OrderInput implements Serializable {
 
-
-    private String order;
     private String origin;
-    private Float total;
-    private String createdAt;
     private List<Item> items;
-
-    public Order getOrderEntity(){
-        var order = new Order();
-        order.setOrder(UUID.randomUUID().toString());
-        order.setOrigin(origin);
-        order.setTotal(total);
-        order.setCreatedAt(createdAt);
-
-        return order;
-    }
 }

@@ -3,12 +3,19 @@ type Order {
     origin: String!
     total: Float!
     createdAt: String
+    items: [Item]!
+}
+
+type Item {
+    name: String!
+    image: String!
+    qty: Int!
+    cost: Float!
+    currency: Currency!
 }
 
 input OrderInput {
     origin: String!
-    total: Float!
-    createdAt: String
     items: [ItemInput]!
 }
 
