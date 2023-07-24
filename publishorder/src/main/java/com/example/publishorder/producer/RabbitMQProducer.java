@@ -1,6 +1,5 @@
 package com.example.publishorder.producer;
 
-import com.example.publishorder.controller.OrderInput;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;

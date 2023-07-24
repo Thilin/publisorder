@@ -26,7 +26,7 @@ enum Currency {
 
 
 type Query{
-    orders: [Order]!
+    dummy: String
 }
 
 type Mutation{
