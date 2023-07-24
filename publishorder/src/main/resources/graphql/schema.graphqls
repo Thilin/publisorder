@@ -1,0 +1,34 @@
+type Order {
+    order: ID!
+    origin: String!
+    total: Float!
+    createdAt: String
+}
+
+input OrderInput {
+    origin: String!
+    total: Float!
+    createdAt: String
+    items: [ItemInput]!
+}
+
+input ItemInput{
+    name: String!
+    image: String!
+    qty: Int!
+    cost: Float!
+    currency: Currency!
+}
+
+enum Currency {
+    BRL
+}
+
+
+type Query{
+    orders: [Order]!
+}
+
+type Mutation{
+    publishPlacedOrderMessage(input: OrderInput): Order
+}
